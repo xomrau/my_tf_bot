@@ -1,12 +1,25 @@
 exports.Matchups = function() {
     var matchup = this;
+
+    const rune = ['Grasp', 'Comet'];
     
+    /*
+    
+    
+    
+    
+    
+    
+    
+    */ 
+
+
     matchup.listOfChamps = {
         'ahri': {
-            difficult: '',
-            win_rate: '',
+            difficult: 'Medium/Hard',
+            win_rate: '', //prolly get it from op.gg
             starting_items: '',
-            rune: '',
+            rune: rune[1],
             sum_spells: '',
             brief: '',
             
