@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 
 // starting point for any bots: new Discord.Client(options)
 const client = new Discord.Client()
+const key = require('./key.json')
 
 client.on('ready', () => {
     console.log(client.readyAt) // time at which the client was last regarded as being in a READY state
@@ -60,8 +61,6 @@ function helpCommand(arg, messageReceived) {
 
 }
 
+const token = JSON.parse(key)
 
-
-bot_secret_token = 'MzkxNzgxMjk0ODA1MzUyNDU4.DoNYgQ.EzBQ9oYVtsKJNVGvO0HNIx_sPCA'
-
-client.login(bot_secret_token)
+client.login(token['discord_bot_secret_token'])

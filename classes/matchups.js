@@ -20,48 +20,48 @@ exports.Matchups = function() {
             win_rate: '', //prolly get it from op.gg
             starting_items: '',
             rune: rune[1],
-            sum_spells: '',
-            brief: '',
+            sum_spells: 'Flash + Ignite/Cleanse',
+            brief: '-- Don\'t stay in lane while chunked, Ahri can cover immense amounts of ground.\n-- Due to Ignite+Electrocute, her kill pressure post-6 has become quite high.\n-- She becomes squishy later in the game, and you outscale.'
             
         },
 
         'akali': {
-            difficult: '',
+            difficult: 'Easy-Hard (depending on Akali\'s skill)',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
-            brief: '',
+            rune: rune[2],
+            sum_spells: 'Flash + Exhaust',
+            brief: '-- The difference between a good and bad Akali is night and day.\n-- Stay back, respect her damage, treat her like a Fizz.\n-- Your ult reveals her but she is still untargetable in the shroud.\n-- Take Grasp and pressure her early game.\n-- Exhaust is good, since her burst takes some time.',
 
         },
 
         'anivia': {
-            difficult: '',
+            difficult: 'Easy',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
+            rune: rune[1],
+            sum_spells: 'Flash + Ignite',
             brief: '',
 
         },
 
         'annie': {
-            difficult: '',
+            difficult: 'Easy',
             win_rate: '',
             starting_items: '',
-            rune: '',
+            rune: rune[1],
             sum_spells: '',
-            brief: '',
+            brief: '-- Know her damage at all times.\n-- She is a very flash reliant champion.\n-- Her waveclear is not great, but she can CS relatively well under tower.\n-- Get MR if she targets you with her flash combo.',
         
         },
 
         'aurelion': {
-            difficult: '',
+            difficult: 'Hard',
             win_rate: '',
             starting_items: '',
             rune: '',
-            sum_spells: '',
-            brief: '',
+            sum_spells: 'Flash+Ghost/Ignite',
+            brief: '-- If you stay in his melee range, he can\'t hit you with anything except AAs and R.\n-- He pushes hard early.\n-- Don\'t try to fight him between corrupting pot, minion advantage, and superfast backs, he has all the tools needed to beat TF early.\n-- He can sort of match your roams but is slower.\n-- If you stun him at the right time, he\'ll miss his Q and his passive damage will decrease dramatically.',
 
         },
         'aurelionsol': {
@@ -84,11 +84,11 @@ exports.Matchups = function() {
         },
 
         'azir': {
-            difficult: '',
+            difficult: 'Easy',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
+            rune: rune[1],
+            sum_spells: 'Flash + Ignite',
             brief: '',
 
         },
@@ -104,12 +104,12 @@ exports.Matchups = function() {
         },
 
         'cass': {
-            difficult: '',
+            difficult: 'Easy',
             win_rate: '',
-            starting_items: '',
-            rune: '',
-            sum_spells: '',
-            brief: '',
+            starting_items: 'Boots + pots',
+            rune: rune[1],
+            sum_spells: 'Flash + Ignite/Exhaust/Cleanse',
+            brief: '-- Dodge her Q and R.\n-- She has a strong level 1 cheese, be wary.\n-- If she can hit her Q+R, her damage is high.\n-- Her waveclear is bad, but you can only really abuse this post-6.\n-- She outscales you after midgame.',
 
         },
         'cassiopeia': {
@@ -133,11 +133,11 @@ exports.Matchups = function() {
         },
 
         'diana': {
-            difficult: '',
+            difficult: 'Easy',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
+            rune: rune[2],
+            sum_spells: 'Flash + Exhaust',
             brief: '',
 
         },
