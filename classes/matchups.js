@@ -133,22 +133,22 @@ exports.Matchups = function() {
         },
 
         'diana': {
-            difficult: 'Easy',
+            difficult: 'Medium',
             win_rate: '',
             starting_items: '',
             rune: rune[2],
             sum_spells: 'Flash + Exhaust',
-            brief: '',
+            brief: '-- Dodge as much of her Q as possible.\n-- She has better resistance to poke than most melee champs, and a surprisingly strong all-in post-6.\n-- Be careful, her engage range is long. However, she doesn\'t have an escape after engaging nor a way to avoid getting stunned.\n-- Save a stun/exhaust for her if she commits.',
 
         },
 
         'ekko': {
-            difficult: '',
+            difficult: 'Medium',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
-            brief: '',
+            rune: 'Grasp',
+            sum_spells: 'Flash + Cleanse/Heal/Ignite',
+            brief: '-- He can chunk you or potentially all-in you if you get stunned.\n-- Be very wary if he goes into the fog of war, he may be throwing his stun.\n-- You have low kill pressure on him post-6',
 
         },
 
@@ -182,22 +182,22 @@ exports.Matchups = function() {
         },
 
         'fizz': {
-            difficult: '',
+            difficult: 'Hard',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
-            brief: '',
+            rune: 'Grasp',
+            sum_spells: 'Flash + Exhaust',
+            brief: '-- Don\'t overcommit with gold card if you are aware of his w is off cooldown.\n-- Establish a frozen lane before harassing him when he goes for cs.\n-- He wins trade post-3 when his W is up, and high kill potential post-6.',
 
         },
 
         'galio': {
-            difficult: '',
+            difficult: 'Free',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
-            brief: '',
+            rune: 'Either',
+            sum_spells: 'Flash + Ignite/Cleanse',
+            brief: '-- TF hard counters Galio. Just don\'t die early, his base damage is high.\n-- You can follow his roams and beat him in lane.\n-- Stun him when he charges up his taunt and he won\'t be able to flash + taunt your team.',
 
         },
 
@@ -260,22 +260,22 @@ exports.Matchups = function() {
         },
 
         'karthus': {
-            difficult: '',
+            difficult: 'Easy/Medium (depending on well you dodge)',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
-            brief: '',
+            rune: 'Comet',
+            sum_spells: 'Flash + Ignite/Ghost',
+            brief: '-- You can actually kill him early as long as you dodge his Q spam.',
 
         },
 
         'kass': {
-            difficult: '',
+            difficult: 'Hard',
             win_rate: '',
             starting_items: '',
-            rune: '',
-            sum_spells: '',
-            brief: '',
+            rune: 'Grasp',
+            sum_spells: 'Flash + Exhaust/Heal',
+            brief: '-- He will try to spam Q you.\n-- Respect his insane mobility especially post-11.',
 
         },
         'kassadin': {

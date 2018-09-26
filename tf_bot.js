@@ -61,6 +61,4 @@ function helpCommand(arg, messageReceived) {
 
 }
 
-const token = JSON.parse(key)
-
-client.login(token['discord_bot_secret_token'])
+client.login(key.discord_bot_secret_token)
