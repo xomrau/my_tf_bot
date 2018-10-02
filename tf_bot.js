@@ -66,10 +66,28 @@ function processCommand(messageReceived) { // breakdown the command
     }
 };
 
+
+//returns list of commands
 function helpCommand(arg, messageReceived) {
+    let helpContent = '```List of commands:\n\n';
+    const Commands = require('./classes/helps.js');
+    const commands = new Commands.Helps();
+
+    for (var prop in commands.listOfResponses){
+        
+        let commandDescription = `!${prop} - ${commands.listOfResponses[prop].description}\n`;
+        //console.log('success2');
+        console.log(commandDescription);
+        helpContent += commandDescription;
+        console.log(helpContent);
+    };
+    helpContent += '```'
+    messageReceived.channel.send(helpContent);
 
 };
 
+
+//returns matchup infos
 function matchupCommand(arg, messageReceived){
     const name = 'matchup';
     let matchup = new Matchup.Matchups();
@@ -79,9 +97,11 @@ function matchupCommand(arg, messageReceived){
             champName = champName.charAt(0).toUpperCase() + champName.substr(1)
             messageReceived.channel.send(`'**Twisted Fate vs ${champName}**'`);
             
-            console.log('Respond to command: ${name} ${arg}');
+            console.log(`Respond to command: ${name} ${arg}`);
         }
     };
 };
 
 client.login(key.discord_bot_secret_token);
+
+

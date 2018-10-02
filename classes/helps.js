@@ -1,10 +1,11 @@
 exports.Helps = function() {
     var commands = this; // inner fn this will not be the same obj as in the outer
 
-    commands.listOfReponses = {
+    commands.listOfResponses = {
         'help': {
             description: `returns help contents.`,
             title: ``,
+            trigger: `helpCommand`,
 
         },
 
@@ -23,6 +24,7 @@ exports.Helps = function() {
             // winrate, 
             description: `syntax: !matchup [champion\'s name] - returns a brief information of the matchup`,
             title: ``,
+            trigger: `matchupCommand`,
         },
 
         'runes': {
