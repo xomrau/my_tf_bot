@@ -2,6 +2,7 @@
 //
 const Discord = require('discord.js');
 const Matchup = require('./classes/matchups.js');
+const Help = require('./classes/helps.js');
 
 // starting point for any bots: new Discord.Client(options)
 const client = new Discord.Client();
@@ -60,6 +61,13 @@ function processCommand(messageReceived) { // breakdown the command
         } else{
             matchupCommand(arg, messageReceived)
         }
+    } else if (primCommand == 'build') {
+        messageReceived.channel.send(`<:1001:498787645816832000>`);
+    } else if (primCommand == 'grossgore'){
+        const commands = new Help.Helps();
+        const embed = new Discord.RichEmbed();
+        embed.setTitle(commands.listOfResponses[primCommand].title);
+        messageReceived.channel.send(embed);
 
     } else {
         messageReceived.channel.send('Hold it partner, I reckon you try `!help`.')
@@ -92,15 +100,42 @@ function matchupCommand(arg, messageReceived){
     const name = 'matchup';
     let matchup = new Matchup.Matchups();
     let champName = arg.toString(); // This is only temporary. Will make a seperate function that format inputs
-    for (i in matchup.listOfChamps){
+    const embed = new Discord.RichEmbed();
+    for (var i in matchup.listOfChamps){
         if (champName === i){
             champName = champName.charAt(0).toUpperCase() + champName.substr(1)
-            messageReceived.channel.send(`'**Twisted Fate vs ${champName}**'`);
-            
+            embed.setTitle(`**Twisted Fate vs. ${champName}**`)
+            try{
+                for (var j in matchup.listOfChamps[i]){
+                    if (matchup.listOfChamps[i][j] === ''){ //if value is empty -> skip.
+                        continue;
+                    }
+                    embed.addField(j, matchup.listOfChamps[i][j]);
+                    console.log(j);
+                    //const a = j;
+                    //console.log(matchup.listOfChamps[i][a]); do this if you want to refer.   
+                }
+            } catch(e){ //this was here to check where the error.
+                if(e instanceof RangeError){
+                    console.log('ERROR IS HERE!');
+                }
+            } 
+            //for (var j in matchup.listOfChamps[i]){
+                //console.log(j, typeof j);
+                //embed.addField(j, value= matchup.listOfChamps[i].j);
+                //console.log(matchup.listOfChamps[i].j);
+
+            //}
+            messageReceived.channel.send(embed);
+            console.log(embed);
             console.log(`Respond to command: ${name} ${arg}`);
         }
     };
 };
+
+function buildCommand(arg, messageReceived){
+
+}
 
 client.login(key.discord_bot_secret_token);
 
