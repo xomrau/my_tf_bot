@@ -103,8 +103,8 @@ function matchupCommand(arg, messageReceived){
     const embed = new Discord.RichEmbed();
     for (var i in matchup.listOfChamps){
         if (champName === i){
-            champName = champName.charAt(0).toUpperCase() + champName.substr(1)
-            embed.setTitle(`**Twisted Fate vs. ${champName}**`)
+            champName = champName.charAt(0).toUpperCase() + champName.substr(1);
+            embed.setTitle(`**Twisted Fate vs. ${champName}**`).setColor('#8B0000'); //*Later fix color depending on difficulty
             try{
                 for (var j in matchup.listOfChamps[i]){
                     if (matchup.listOfChamps[i][j] === ''){ //if value is empty -> skip.
