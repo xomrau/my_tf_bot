@@ -12,6 +12,7 @@ exports.Helps = function() {
         'build': {
             description: `returns recommended twisted fate\'s build.`,
             title: `**CRASH COURSE TO TWISTED FATE BUILD**`,
+            trigger:`buildCommand`,
 
         },
 
