@@ -63,12 +63,15 @@ function processCommand(messageReceived) { // breakdown the command
             matchupCommand(arg, messageReceived)
         }
     } else if (primCommand == 'build') {
-        messageReceived.channel.send(`<:1001:498787645816832000>`);
+        buildCommand(arg, messageReceived);
     } else if (primCommand == 'grossgore'){
         const commands = new Help.Helps();
         const embed = new Discord.RichEmbed();
         embed.setTitle(commands.listOfResponses[primCommand].title);
         messageReceived.channel.send(embed);
+
+    } else if (primCommand == 'patch') {
+        patchCommand(arg, messageReceived);
 
     } else {
         messageReceived.channel.send('Hold it partner, I reckon you try `!help`.')
@@ -132,9 +135,29 @@ function matchupCommand(arg, messageReceived){
     };
 };
 
-function buildCommand(arg, messageReceived){
+function buildCommand(arg, messageReceived){ //still needs to fix!!!
+    const name = 'build';
+    const builds = new Build.Build();
     const embed = new Discord.RichEmbed();
+    
+    //messageReceived.channel.send(embed);
+    try{
+        for (var i in builds.list){
+            embed.addField(i,builds.list[i]);
+        }
+    } catch(e){ //this was here to check where the error.
+        if(e instanceof RangeError){
+            console.log('ERROR IS HERE!');
+        }
+    }
+    messageReceived.channel.send(embed);
+    console.log(embed);
+    console.log(`Respond to command: ${name} ${arg}`);
+}
 
+//returns current or any patch note.
+function patchCommand(arg, messageReceived){
+    
 }
 
 client.login(key.discord_bot_secret_token);

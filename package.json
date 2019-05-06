@@ -1,0 +1,30 @@
+{
+  "name": "tfbot",
+  "version": "1.0.0",
+  "description": "Custom bot for the Twisted Fate mains Discord channel!",
+  "main": "tf_bot.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "discord.js": "^11.4.2",
+    "puppeteer": "^1.10.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "scripts": {
+    "tfbot": "nodemon tf_bot.js",
+    "test": "!test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xomrau/my_tf_bot.git"
+  },
+  "author": "xomrau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xomrau/my_tf_bot/issues"
+  },
+  "homepage": "https://github.com/xomrau/my_tf_bot#readme"
+}
